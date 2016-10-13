@@ -27,7 +27,7 @@ namespace SendGrid.SmtpApi
 				using (var jsonWriter = new JsonTextWriter(writer))
 				{
 					serializer.Serialize(jsonWriter, objectToSerialize);
-					return jsonWriter.ToString();
+					return writer.ToString();
 					//Console.WriteLine(writer.ToString());
 				}
 			}
